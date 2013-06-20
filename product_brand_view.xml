@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>  
+    <data>
+        <!--添加动作和菜单-->
+        <record model="ir.actions.act_window" id="action_product_brand">
+            <field name="name">Brand</field>
+            <field name="res_model">product.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Brand management" id="menu_product_brand" action="action_product_brand" parent="product.prod_config_main"/>
+        
+        <!--新建产品品牌form-->
+        <record model="ir.ui.view" id="view_product_brand_form">
+            <field name="name">product.brand.form</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <form string="product.brand" version="7.0">
+                    <group>
+                        <field name="name" select="1"/>
+                        <field name="logo" widget='image' />
+                        <field name="partner_id" string="Belongs to Partner" select="1"/>
+                        <field colspan="3" name="description" placeholder="Brand description" nolabel="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!--产品品牌列表-->
+        <record model="ir.ui.view" id="view_product_brand_tree">
+            <field name="name">product.brand.tree</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <tree string="product.brand" version="7.0">
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="partner_id" string="Partner"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!--产品创建form中添加品牌字段-->
+        <record model="ir.ui.view" id="product_normal_form_brand">
+           <field name="name">product.normal.form.brand</field>
+           <field name="model">product.product</field>
+           <field name="inherit_id" ref="product.product_normal_form_view" />
+           <field name="arch" type="xml">
+                <field name="name" position="after"  >
+                    <h4>
+                        <label for="product_brand_id" string="品牌" class="oe_edit_only"/>
+                    </h4>
+                    <h2>
+                        <field name="product_brand_id" select="1" />
+                    </h2>
+               </field>
+           </field>
+        </record>
+       
+        <!--产品模板form中添加品牌字段-->
+        <record model="ir.ui.view" id="product_template_form_brand_add">
+            <field name="name">product.template.form.brand</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view" />
+            <field name="arch" type="xml">
+                <field name="name" position="after"  >
+                    <h4>
+                        <label for="product_brand_id" string="品牌" class="oe_edit_only"/>
+                    </h4>
+                    <h2>
+                        <field name="product_brand_id" select="1" />
+                    </h2>                    
+                </field>
+              </field>
+        </record>
+        
+    </data>
+</openerp>
