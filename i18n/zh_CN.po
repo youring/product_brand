@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-17 01:45+0000\n"
+"PO-Revision-Date: 2015-01-17 01:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_brand
+#: model:ir.actions.act_window,name:product_brand.action_product_brand
+#: view:product.template:product_brand.product_template_search_view_brand
+#: field:product.template,product_brand_id:0
+msgid "Brand"
+msgstr "品牌"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_form
+#: field:product.brand,name:0
+msgid "Brand Name"
+msgstr "品牌名称"
+
+#. module: product_brand
+#: model:ir.ui.menu,name:product_brand.menu_product_brand
+msgid "Brand management"
+msgstr "品牌管理"
+
+#. module: product_brand
+#: field:product.brand,create_uid:0
+msgid "Created by"
+msgstr "创建人"
+
+#. module: product_brand
+#: field:product.brand,create_date:0
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_form
+#: field:product.brand,description:0
+msgid "Description"
+msgstr "描述"
+
+#. module: product_brand
+#: field:product.brand,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: product_brand
+#: field:product.brand,write_uid:0
+msgid "Last Updated by"
+msgstr "修改人"
+
+#. module: product_brand
+#: field:product.brand,write_date:0
+msgid "Last Updated on"
+msgstr "修改时间"
+
+#. module: product_brand
+#: field:product.brand,logo:0
+msgid "Logo File"
+msgstr "Logo图片"
+
+#. module: product_brand
+#: field:product.brand,partner_id:0
+msgid "Partner"
+msgstr "合作伙伴"
+
+#. module: product_brand
+#: view:product.brand:product_brand.product_brand_search_form_view
+#: view:product.brand:product_brand.view_product_brand_form
+msgid "Product Brand"
+msgstr "产品品牌"
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_brand
+msgid "Product Brands"
+msgstr "产品品牌"
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product Template"
+msgstr "Product Template"
+
+#. module: product_brand
+#: help:product.template,product_brand_id:0
+msgid "Select a brand for this product."
+msgstr "选择产品品牌"
+
+#. module: product_brand
+#: help:product.brand,partner_id:0
+msgid "Select a partner for this brand if it exists."
+msgstr "如果存在，选择此品牌的持有者。"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_tree
+msgid "product.brand"
+msgstr "品牌列表"
+
